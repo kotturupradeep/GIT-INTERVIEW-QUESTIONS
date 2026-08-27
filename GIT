@@ -1,7 +1,8 @@
 1. What is Git?
 
 Answer:
-Git is a distributed version control system (VCS) used to track changes in source code and files. It helps developers maintain version history, create branches, work with multiple developers, and merge changes.
+Git is a distributed version control system (VCS) used to track changes in source code and files. It helps developers
+maintain version history, create branches, work with multiple developers, and merge changes.
 
 Example:
 
@@ -11,7 +12,8 @@ git commit -m "Initial commit"
 2. What is GitHub?
 
 Answer:
-GitHub is a cloud-based platform for hosting Git repositories. It allows developers to store code, collaborate with team members, review code using Pull Requests, and manage projects.
+GitHub is a cloud-based platform for hosting Git repositories. It allows developers to store code, collaborate with team
+members, review code using Pull Requests, and manage projects.
 
 Example:
 We can push our local Git repository to GitHub and share it with the team.
@@ -164,7 +166,8 @@ git fetch downloads remote changes without integrating them into my current bran
 11. What is a branch?
 
 Answer:
-A branch is an independent line of development. It allows developers to work on features or bug fixes without directly modifying the main branch.
+A branch is an independent line of development. It allows developers to work on features or bug fixes without directly
+modifying the main branch.
 
 Example:
 
@@ -217,7 +220,8 @@ git commit -m "Resolved merge conflict"
 
 Interview answer:
 
-A merge conflict happens when Git cannot automatically combine changes from different branches. I resolve it manually, stage the resolved files, and commit the changes.
+A merge conflict happens when Git cannot automatically combine changes from different branches. I resolve it manually, 
+stage the resolved files, and commit the changes.
 
 14. What is .gitignore?
 
@@ -232,7 +236,8 @@ Example:
 node_modules/
 backup/
 
-For example, we can use .gitignore to prevent temporary files, log files, generated files, or local configuration files from being committed.
+For example, we can use .gitignore to prevent temporary files, log files, generated files, or local configuration files 
+from being committed.
 
 Interview answer:
 
@@ -258,7 +263,8 @@ git revert <commit-id>
 
 Interview answer:
 
-git reset can rewrite or move Git history, while git revert creates a new commit that reverses the changes of an earlier commit. For shared branches, I generally prefer git revert.
+git reset can rewrite or move Git history, while git revert creates a new commit that reverses the changes of an earlier 
+commit. For shared branches, I generally prefer git revert.
 
 ⭐ Important Git Flow to Remember
 Working Directory
