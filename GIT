@@ -1,0 +1,304 @@
+1. What is Git?
+
+Answer:
+Git is a distributed version control system (VCS) used to track changes in source code and files. It helps developers maintain version history, create branches, work with multiple developers, and merge changes.
+
+Example:
+
+git init
+git add .
+git commit -m "Initial commit"
+2. What is GitHub?
+
+Answer:
+GitHub is a cloud-based platform for hosting Git repositories. It allows developers to store code, collaborate with team members, review code using Pull Requests, and manage projects.
+
+Example:
+We can push our local Git repository to GitHub and share it with the team.
+
+3. What is the difference between Git and GitHub?
+
+Answer:
+
+Git	GitHub
+Version control system	Cloud-based Git hosting platform
+Installed on a local system/server	Accessed mainly through the internet
+Tracks changes and version history	Hosts repositories and provides collaboration features
+Uses commands like commit, branch, merge	Provides Pull Requests, Issues, Actions, etc.
+
+Simple answer:
+
+Git is a tool for version control, while GitHub is a platform used to host and collaborate on Git repositories.
+
+4. What is a repository?
+
+Answer:
+A repository (repo) is a location where Git stores project files and their version history.
+
+There are two main types:
+
+Local repository – stored on your computer or server.
+Remote repository – stored on GitHub or another Git hosting platform.
+
+Example:
+
+Local Repository  →  GitHub Remote Repository
+5. What is git init?
+
+Answer:
+git init is used to create a new Git repository in an existing directory.
+
+Example:
+
+mkdir project
+cd project
+git init
+
+This creates a hidden .git directory.
+
+Interview answer:
+
+git init initializes a new Git repository in a project directory.
+
+6. What is git add?
+
+Answer:
+git add is used to move changes from the working directory to the staging area.
+
+For one file:
+
+git add test.txt
+
+For all files:
+
+git add .
+
+Flow:
+
+Working Directory
+       ↓
+    git add
+       ↓
+Staging Area
+
+Interview answer:
+
+git add stages the changes that I want to include in my next commit.
+
+7. What is git commit?
+
+Answer:
+git commit saves the staged changes into the local Git repository.
+
+Example:
+
+git commit -m "Added new configuration"
+
+Flow:
+
+Staging Area
+      ↓
+  git commit
+      ↓
+Local Repository
+
+Interview answer:
+
+git commit records staged changes in the local repository with a meaningful message.
+
+8. What is git push?
+
+Answer:
+git push is used to upload local commits to a remote repository, such as GitHub.
+
+Example:
+
+git push origin main
+
+Flow:
+
+Local Repository
+       ↓
+    git push
+       ↓
+GitHub
+
+Interview answer:
+
+git push uploads my local commits to the remote repository.
+
+9. What is git pull?
+
+Answer:
+git pull downloads the latest changes from the remote repository and integrates them into the current local branch.
+
+Example:
+
+git pull origin main
+
+Interview answer:
+
+git pull is used to get the latest changes from the remote repository and integrate them into my current branch.
+
+10. What is the difference between git pull and git fetch?
+
+Answer:
+
+git fetch	git pull
+Downloads changes from remote	Downloads changes from remote
+Does not automatically integrate them into the current branch	Integrates the downloaded changes
+Useful for reviewing changes first	Useful for quickly updating the local branch
+
+Example:
+
+git fetch origin
+
+Then you can inspect the changes before merging.
+
+git pull origin main
+
+Interview answer:
+
+git fetch downloads remote changes without integrating them into my current branch, while git pull downloads and integrates the changes.
+
+11. What is a branch?
+
+Answer:
+A branch is an independent line of development. It allows developers to work on features or bug fixes without directly modifying the main branch.
+
+Example:
+
+main
+ ├── development
+ ├── feature-login
+ └── bugfix
+
+Create a branch:
+
+git switch -c development
+
+Interview answer:
+
+A branch allows us to work on a feature or bug fix separately without affecting the main branch.
+
+12. What is merging?
+
+Answer:
+Merging means combining the changes from one branch into another branch.
+
+Example:
+
+git switch main
+git merge development
+
+This combines the development branch changes into main.
+
+Interview answer:
+
+Merge is used to combine changes from one branch into another branch.
+
+13. What is a merge conflict?
+
+Answer:
+A merge conflict occurs when Git cannot automatically combine changes from two branches.
+
+For example, if two developers modify the same line of the same file differently, Git may report a conflict.
+
+Check the conflict:
+
+git status
+
+Then manually resolve the conflicting file.
+
+After resolving:
+
+git add .
+git commit -m "Resolved merge conflict"
+
+Interview answer:
+
+A merge conflict happens when Git cannot automatically combine changes from different branches. I resolve it manually, stage the resolved files, and commit the changes.
+
+14. What is .gitignore?
+
+Answer:
+.gitignore is a file used to tell Git which files or directories should not be tracked.
+
+Example:
+
+*.log
+.env
+*.tmp
+node_modules/
+backup/
+
+For example, we can use .gitignore to prevent temporary files, log files, generated files, or local configuration files from being committed.
+
+Interview answer:
+
+.gitignore specifies files and directories that Git should not track.
+
+15. What is the difference between git reset and git revert?
+
+Answer:
+
+git reset	git revert
+Can move the branch/HEAD pointer	Creates a new commit
+Can rewrite history	Preserves existing history
+Can be dangerous on shared branches	Safer for shared branches
+Has --soft, --mixed, and --hard modes	Reverses an earlier commit
+
+Reset example:
+
+git reset --soft HEAD~1
+
+Revert example:
+
+git revert <commit-id>
+
+Interview answer:
+
+git reset can rewrite or move Git history, while git revert creates a new commit that reverses the changes of an earlier commit. For shared branches, I generally prefer git revert.
+
+⭐ Important Git Flow to Remember
+Working Directory
+        ↓
+    git add
+        ↓
+  Staging Area
+        ↓
+   git commit
+        ↓
+Local Repository
+        ↓
+    git push
+        ↓
+Remote Repository / GitHub
+
+When you want the latest code:
+
+git pull
+
+When you want to download an existing project for the first time:
+
+git clone <repository-url>
+🔥 Interview Tip
+
+For a 1-year Linux/Technical Support interview, make sure you can practically explain these commands:
+
+git status
+git add .
+git commit -m "message"
+git push
+git pull
+git fetch
+git branch
+git switch
+git merge
+git log
+git diff
+git stash
+
+The most important flow to explain confidently is:
+
+git add → git commit → git push
